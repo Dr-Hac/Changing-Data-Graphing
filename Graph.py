@@ -6,38 +6,29 @@ PROGRAMMER: Dr Hac
 """
 
 import matplotlib.pyplot as plt
-import numpy
 from matplotlib.animation import FuncAnimation
-import Data
 import pandas as pd
 import numpy as np
+import Data
 
-Data1 = Data.Data()
-Data2 = Data.Data()
-Data3 = Data.Data()
+Data = Data.Data()
 fig = plt.figure()
+# create 3D subplot
 ax = fig.add_subplot(111, projection='3d')
 
 
 def create(i):
     ax.clear()
-    Data1.update()
-    Data2.update()
-    Data3.update()
-    print('Data1 \n', Data1.get())
-    print('Data2 \n', Data2.get())
-    print('Data3 \n', Data3.get())
-    x = np.array(Data1.get())
-    y = x.copy().T
-    z = np.array(Data3.get())
-    """
+    # reroll the data set
+    Data.update()
+    print('Data1 \n', Data.get())
     for index in Data.get().index:
         for column in Data.get().columns:
+            # graph data pulled from the Data.Data() dataframe
             ax.scatter3D(index, column, Data.get().loc[index, column])
-    """
-    ax.plot_surface(x, y, z, color='Red', shade=True)
 
 
+# update the graph based on the create() function
 a = FuncAnimation(fig, create)
 plt.show()
 
