@@ -4,7 +4,7 @@
 * Pandas 2
 * Numpy 2
 * Matplotlib 3
-### Use
+### Uses
 this project shows that it is possible to continue having a graph running and updating in matplotlib. the same functions used here could be used for many other things such as keeping track of live data like the stock market.
 ## Data.py
 ### Description
