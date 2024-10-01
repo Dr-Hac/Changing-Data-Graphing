@@ -17,3 +17,6 @@ To run Graph.py simply put both Graph.py and Data.py into your python 3 environm
 ```
 python3 Graph.py
 ```
+### Output
+your output will be in the form of a 3D scatter plot that will change often. to stop the progam just close the window.
+![changing data graph](https://github.com/user-attachments/assets/a2f1b6a6-15bc-4159-8d4f-5d22f44c7a5e)
